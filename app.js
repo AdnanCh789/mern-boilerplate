@@ -10,6 +10,7 @@ const io = require("socket.io")(httpServer, {
   },
 });
 require("./startup/sockets")(io);
+require("./startup/db")();
 require("./startup/config")();
 require("./startup/logging")();
 require("./startup/routes")(app);

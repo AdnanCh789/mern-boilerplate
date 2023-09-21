@@ -4,9 +4,9 @@
 
 module.exports = () => {
   // To set the environment
-  console.log("Environment =>", process.env.NODE_ENV);
+  // console.log("Environment =>", process.env.NODE_ENV);
 
-  if (!process.env.NODE_ENV) {
-    throw new Error("FATAL ERROR: environment is not defined.");
-  }
+  // if (!process.env.NODE_ENV) {
+  //   throw new Error("FATAL ERROR: environment is not defined.");
+  // }
 };

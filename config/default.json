@@ -2,7 +2,7 @@
     "server" : {
         "port" : 5000
     },
-    "db": "mongodb://localhost/name",
+    "db": "mongodb://127.0.0.1/name",
     "jwtPrivateKey": ""
     
 }

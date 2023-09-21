@@ -27,4 +27,11 @@ const getUser = (id) => users.find((user) => user.id === id);
 
 const getUsersInRoom = (room) => users.filter((user) => user.room === room);
 
-module.exports = { addUser, removeUser, getUser, getUsersInRoom, users };
+const userById = async (req, res, next, id) => {
+  const user = await User.findById(id);
+  if (!user) return res.status(400).send("No user found..");
+  req.profile = user;
+  next();
+};
+
+module.exports = { addUser, removeUser, getUser, getUsersInRoom, users, userById };
